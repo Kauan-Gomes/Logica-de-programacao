@@ -4,6 +4,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace exerciciosAcademia
 {
@@ -186,11 +187,125 @@ namespace exerciciosAcademia
             //conseqüente pagamento dos boletos das duas prestações.
 
 
+            //float entrada, valor, sobra, prestacoes;
 
 
+            //Console.Write("Entre com o valor do produto: R$");
+            //valor = float.Parse(Console.ReadLine());
+
+            //sobra = valor % 3;
+
+            //valor = valor - sobra;
+
+            //prestacoes = valor / 3;
+
+            //entrada = prestacoes + sobra;
+
+            //Console.WriteLine("Valor de entrada do produto: R$" + entrada );
+            //Console.WriteLine("Valor das outras duas prestações do produto: R$" + prestacoes );
+
+            //11) Escreva um algoritmo para ler o número de eleitores de um município,
+            //o número de votos brancos, nulos e válidos. 
+            //Calcule e escreva o percentual que cada um  representa em relação ao total de eleitores.
 
 
+            //int nulos, brancos, validos, eleitores;
+            //float porcNulo, porcBrancos, porcValidos,semVoto;
 
+            //Console.WriteLine("Entre com a quantidadede de eleitores: ");
+            //eleitores = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Entre com a quantidadede de votos validos: ");
+            //validos = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Entre com a quantidadede de votos brancos: ");
+            //brancos = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Entre com a quantidadede de votos nulos: ");
+            //nulos = int.Parse(Console.ReadLine());
+
+
+            //while ( (validos + brancos + nulos) > eleitores)
+            //{
+
+            //    Console.WriteLine("Entre com a quantidadede de votos validos: ");
+            //    validos = int.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("Entre com a quantidadede de votos brancos: ");
+            //    brancos = int.Parse(Console.ReadLine());
+
+            //    Console.WriteLine("Entre com a quantidadede de votos nulos: ");
+            //    nulos = int.Parse(Console.ReadLine());
+            //}
+
+            //porcNulo = (float)((nulos * 100) / eleitores);
+            //porcValidos = (float)((validos*100)/ eleitores);
+            //porcBrancos = (float)((brancos*100)/ eleitores);
+            //semVoto = 100 - porcBrancos - porcNulo - porcValidos;
+
+
+            //Console.WriteLine("Valor em porcento de votos Brancos: "+ porcBrancos + "%");
+            //Console.WriteLine("-------------------------------------");
+            //Console.WriteLine("Valor em porcento de votos Nulos: "+porcNulo + "%");
+            //Console.WriteLine("-------------------------------------");
+            //Console.WriteLine("Valor em porcento de votos validos: "+ porcValidos + "%");
+            //Console.WriteLine("-------------------------------------");
+            //Console.WriteLine("Valor em porcento de pessoas que não votaram: " + semVoto+"%");
+            //Console.WriteLine("-------------------------------------");
+
+
+            //12) Um motorista de taxi deseja calcular o rendimento de seu carro na praça.Sabendo - se que o preço do combustível é de R$6,90, escreva um algoritmo para ler a
+            //marcação do odômetro(marcador de quilometragem) no início do dia, a marcação no final do dia, o número de litros de combustível gasto e o valor total(R$) recebido
+            //dos passageiros.Calcule e escreva a média do consumo em Km / l e o lucro líquido do dia.
+
+            //Fórmulas: Total quilometragem = marcação odômetro final do dia - marcação odômetro inicio do dia
+
+            //Média do consumo = Total quilometragem / quantidade de combustível gasto
+
+            //Lucro do dia = Valor total recebido - (quantidade de combustível gasto * 6,90)
+
+            //double km_inicial, km_final,km_total, preco, litros, valor_recebido, media, lucro;
+
+            //preco = 6.90;
+
+            //Console.WriteLine("Entre com a marcação inicial de KM: ");
+            //km_inicial = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Entre com a marcação final de KM: ");
+            //km_final = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Entre com a quantidade de litros utilizada: ");
+            //litros = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Entre com o valor recebido pelos passageiros: ");
+            //valor_recebido = double.Parse(Console.ReadLine());
+
+            //km_total = km_final - km_inicial;
+
+            //media = km_total / litros;
+
+            //lucro = valor_recebido - (litros * preco);
+
+            //Console.WriteLine("A media de consumo de KM/l é de: "+ media+"KM/L");
+            //Console.WriteLine("Lucro liquido é de: R$"+ lucro);
+
+            //13) Uma loja vende bicicletas com um acréscimo de 50 % sobre o preço de custo. Ela paga a cada vendedor 2 salários mínimos mensais, mais uma comissão de 15 % sobre o
+            //preço de custo de cada bicicleta vendida. Desenvolva um algoritmo que leia o valor do salário mínimo, o preço de custo de cada bicicleta e o número de bicicletas
+            //vendidas pelo vendedor, calcule e mostre: o salário do empregado
+
+
+            //double salario_minimo, preco_custo, preco_venda, bike_vendidas, salario;
+
+
+            //Console.Write("Entre com valor do salario minimo: R$");
+            //salario_minimo = double.Parse(Console.ReadLine());
+            //Console.Write("Entre com o preço de custo da bicicleta: R$");
+            //preco_custo = double.Parse(Console.ReadLine());
+            //Console.Write("Quantidade de bicicletas vendidas pelo vendedor: ");
+            //bike_vendidas = double.Parse(Console.ReadLine());
+
+            //preco_venda = preco_custo + (preco_custo / 2);
+
+            //salario = (2 * salario_minimo) + ((0.15 * preco_venda)*bike_vendidas);
+
+            //Console.WriteLine("O salario do empregado é de: R$" +  salario);
         }
     }
 }
