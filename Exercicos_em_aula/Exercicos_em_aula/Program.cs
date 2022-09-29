@@ -95,11 +95,51 @@
             //    }
 
             //}
-     
+
             //Console.WriteLine("Contagem dos números impares: "+contagem);
             //Console.WriteLine("Coma dos números pares: "+soma);
 
+            //int i;
 
+            //int[] b = new int[5];
+            //Console.WriteLine("----------------  leitura dos valores -------------------");
+
+            //for ( i =0; i < 5; i++)
+            //{
+            //    Console.WriteLine("Digite o valor" + i + ":");
+            //    b[i] = int.Parse(Console.ReadLine());
+            //}
+
+            //for (i = 0; i < 5; i++)
+            //{
+            //    Console.WriteLine("valor indice "+ i + "é igual a " + b[i]);
+            //}
+
+
+
+            // laço para leitura dos elementos e mostrar qual é o maior
+
+            //int[] vetor = new int[10];
+            //int i, maior, pos;
+
+            //for (i = 0; i < 10; i++)
+            //{
+            //    Console.WriteLine("Digite o valor do elemento " + i);
+            //    vetor[i] = int.Parse(Console.ReadLine()); 
+            //}
+            //maior = vetor[0];
+            //pos = 0;
+
+            //for (i = 0; i < 10; i++)
+            //{
+            //    if (vetor[i] > maior)
+            //    {
+            //        maior = vetor[i];
+            //        pos = i;
+            //    }
+            //}
+
+            //Console.WriteLine("O maior elemento é: " + maior + "e está na posição " + pos);
 
 
 
