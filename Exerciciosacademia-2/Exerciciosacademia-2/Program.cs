@@ -9,6 +9,9 @@ using System.Runtime.Intrinsics.X86;
 using System.IO;
 using System.Runtime.ConstrainedExecution;
 using System.Formats.Asn1;
+using System.Runtime.Intrinsics.Arm;
+using System.Threading.Channels;
+using System.Security.Cryptography;
 
 namespace Exerciciosacademia_2
 {
@@ -582,15 +585,210 @@ namespace Exerciciosacademia_2
 
             // 18 - Escreva um algoritmo que leia 3 valores pelo teclado e então informe qual o maior deles.
 
-            
+            //double n1, n2, n3;
+
+            //Console.WriteLine("Digite um numero: ");
+            //n1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Digite um segundo numero: ");
+            //n2 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Digite um terceiro numero: ");
+            //n3 = double.Parse(Console.ReadLine());
 
 
+            //if(n1 > n2 && n1 > n3)
+            //{
+            //    Console.WriteLine("Primeiro numero digitado é o maior !!!");
+            //}
+            //else if (n2 > n1 && n2 > n3)
+            //{
+            //    Console.WriteLine("Segundo numero digitado é o maior !!!");
+            //}
+            //else if (n3 > n1 && n3 > n2)
+            //{
+            //    Console.WriteLine("Terceiro numero digitado é o maior !!!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Numeros são iguais !!!");
+            //}
 
+
+            // 19 - Ajuste o exercício 18 de maneira que mostre os valores informados em ordem crescente.
+
+
+            //double n1, n2, n3;
+
+            //Console.WriteLine("Digite um numero: ");
+            //n1 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Digite um segundo numero: ");
+            //n2 = double.Parse(Console.ReadLine());
+            //Console.WriteLine("Digite um terceiro numero: ");
+            //n3 = double.Parse(Console.ReadLine());
+
+
+            //if (n1 > n2 && n1 > n3)
+            //{
+            //    Console.WriteLine("Em ordem crescente: ");
+            //    if (n2 > n3)
+            //    {
+            //        Console.WriteLine(n3);
+            //        Console.WriteLine(n2);
+            //        Console.WriteLine(n1);
+            //    }
+            //    else if (n3 > n2)
+            //    {
+            //        Console.WriteLine(n2);
+            //        Console.WriteLine(n3);
+            //        Console.WriteLine(n1);
+            //    }
+
+            //}
+            //else if (n2 > n1 && n2 > n3)
+            //{
+            //    Console.WriteLine("Em ordem crescente: \n");
+            //    if (n1 > n3)
+            //    {
+            //        Console.WriteLine(n3);
+            //        Console.WriteLine(n1);
+            //        Console.WriteLine(n2);
+
+            //    }
+            //    else if ( n3 > n1)
+            //    {
+            //        Console.WriteLine(n1);
+            //        Console.WriteLine(n3);
+            //        Console.WriteLine(n2);
+            //    }
+            //}
+            //else if (n3 > n1 && n3 > n2)
+            //{
+            //    Console.WriteLine("Em ordem crescente: \n" );
+            //    if (n1 > n2)
+            //    {
+            //        Console.WriteLine(n2);
+            //        Console.WriteLine(n1);
+            //        Console.WriteLine(n3);
+            //    }
+            //    else if (n2 > n1)
+            //    {
+            //        Console.WriteLine(n1);
+            //        Console.WriteLine(n2);
+            //        Console.WriteLine(n3);
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Numeros são iguais !!!");
+            //}
+
+            //20 - Escreva um algoritmo para o jogo de adivinhação do número secreto. O jogador tem 3 chances e recebe dicas do tipo “é maior” ou “é menor”. 
+            //plus: você pode gerar o número de forma randomica(função random c#).
+
+            //int i, numero;
+
+            //Random rnd = new Random();
+
+            //i = (int)rnd.Next(1, 10);
+
+            //Console.WriteLine("Tente advinhar qual é o numero !!!");
+            //numero = int.Parse(Console.ReadLine());
+
+            //if(numero == i)
+            //{
+            //    Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //}
+            //else if (numero != i)
+            //{
+
+
+            //   if (numero > i)
+            //    {
+            //        Console.WriteLine("O numero é menor, advinhe outro");
+            //        numero = int.Parse(Console.ReadLine());
+
+            //        if (numero == i)
+            //        {
+            //            Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //        }
+            //        else if (numero > i)
+            //        {
+            //            Console.WriteLine("O numero é menor");
+            //            numero = int.Parse(Console.ReadLine());
+
+            //            if (numero != i)
+            //            {
+            //                Console.WriteLine("Você errou o numero !!!");
+            //            }
+            //            else if (numero == i)
+            //            {
+            //                Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //            }
+            //        }
+            //        else if (numero < i)
+            //        {
+            //            Console.WriteLine("O numero é maior");
+            //            numero = int.Parse(Console.ReadLine());
+
+            //            if (numero != i)
+            //            {
+            //                Console.WriteLine("Você errou o numero !!!");
+            //            }
+            //            else if (numero == i)
+            //            {
+            //                Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //            }
+            //        }
+            //    }   
+
+
+            //   else if (numero < i)
+            //    {
+            //        Console.WriteLine("O numero é maior, advinhe outro");
+            //        numero = int.Parse(Console.ReadLine());
+
+            //        if (numero == i)
+            //        {
+            //            Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //        }
+
+            //        else if (numero < i)
+            //        {
+            //            Console.WriteLine("O numero é maior");
+            //            numero = int.Parse(Console.ReadLine());
+
+            //            if (numero != i)
+            //            {
+            //                Console.WriteLine("Você errou o numero !!!");
+            //            }
+            //            else if (numero == i)
+            //            {
+            //                Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //            }
+            //        }
+
+            //        else if (numero > i)
+            //        {
+            //            Console.WriteLine("O numero é menor");
+            //            numero = int.Parse(Console.ReadLine());
+
+            //            if (numero != i)
+            //            {
+            //                Console.WriteLine("Você errou o numero !!!");
+            //            }
+            //            else if (numero == i)
+            //            {
+            //                Console.WriteLine("VOCÊ ACERTOU !!!!");
+            //            }
+            //        }
+                   
+            //        }
+            //    }
+
+            }
 
         }
 
     }
 
 
-    }
     
