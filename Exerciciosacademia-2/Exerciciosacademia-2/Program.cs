@@ -693,7 +693,7 @@ namespace Exerciciosacademia_2
             //Console.WriteLine("Tente advinhar qual é o numero !!!");
             //numero = int.Parse(Console.ReadLine());
 
-            //if(numero == i)
+            //if (numero == i)
             //{
             //    Console.WriteLine("VOCÊ ACERTOU !!!!");
             //}
@@ -701,7 +701,7 @@ namespace Exerciciosacademia_2
             //{
 
 
-            //   if (numero > i)
+            //    if (numero > i)
             //    {
             //        Console.WriteLine("O numero é menor, advinhe outro");
             //        numero = int.Parse(Console.ReadLine());
@@ -738,10 +738,10 @@ namespace Exerciciosacademia_2
             //                Console.WriteLine("VOCÊ ACERTOU !!!!");
             //            }
             //        }
-            //    }   
+            //    }
 
 
-            //   else if (numero < i)
+            //    else if (numero < i)
             //    {
             //        Console.WriteLine("O numero é maior, advinhe outro");
             //        numero = int.Parse(Console.ReadLine());
@@ -780,13 +780,13 @@ namespace Exerciciosacademia_2
             //                Console.WriteLine("VOCÊ ACERTOU !!!!");
             //            }
             //        }
-                   
-            //        }
-            //    }
 
-            }
+            //    }
+            //}
 
         }
+
+    }
 
     }
 

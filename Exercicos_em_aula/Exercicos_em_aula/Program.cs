@@ -97,7 +97,7 @@
             //}
 
             //Console.WriteLine("Contagem dos números impares: "+contagem);
-            //Console.WriteLine("Coma dos números pares: "+soma);
+            //Console.WriteLine("Soma dos números pares: "+soma);
 
             //int i;
 
