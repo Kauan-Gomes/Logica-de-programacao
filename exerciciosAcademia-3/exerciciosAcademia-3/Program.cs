@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Globalization;
+using System.Net;
 using System.Runtime.ConstrainedExecution;
 using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics.X86;
@@ -470,57 +471,419 @@ namespace academiaexercicios_3
             //Média de idade das mulheres.
 
 
-            string nome;
-            string sexo;
-            int idade, pessoas = 2, m = 0, f = 0, id_menorTrinta = 0, id_maiorSessenta = 0, soma = 0;
+            //string nome;
+            //string sexo;
+            //int idade, pessoas = 50, m = 0, f = 0, id_menorTrinta = 0, id_maiorSessenta = 0, soma = 0;
+
+            //int[] vetor = new int[pessoas];
+
+            //for (int i = 0; i < pessoas; i++)
+            //{
+            //    Console.WriteLine("Entre com o nome: ");
+            //    nome = Console.ReadLine();
+
+            //    Console.WriteLine("Entre com seu sexo: ");
+            //    sexo = Console.ReadLine();
+
+            //    Console.WriteLine("Entre com sua idade: ");
+            //    idade = int.Parse(Console.ReadLine());
+
+            //    if (sexo == "masculino" || sexo == "feminino")
+            //    {
+            //        if (sexo == "masculino")
+            //        {
+            //            m = m + 1;
+            //        }
+            //        else if (sexo == "feminino")
+            //        {
+            //            f ++;
+            //            soma = soma + idade;
+
+            //        }
+            //    }
+
+            //    if (idade < 30)
+            //    {
+            //        id_menorTrinta ++;
+            //    }
+            //    else if ( idade > 60)
+            //    {
+            //        id_maiorSessenta++;
+            //    }
+
+            //}
+
+            //Console.WriteLine("Número de pessoas do sexo masculino: " + m );
+            //Console.WriteLine("Número de pessoas do sexo feminino: " + f );
+            //Console.WriteLine("Número de pessoas com idade inferior a 30 anos: " + id_menorTrinta );
+            //Console.WriteLine("Número de pessoas com idade superior a 60 anos: " + id_maiorSessenta );
+            //Console.WriteLine("Média de idade das mulheres: " + (soma/f) );
+
+
+            //11.Ler as notas de uma turma de alunos e ao final imprimir a nota mais alta, a nota mais baixa,
+            //a média aritmética da turma e a quantidade de alunos da turma.Usar - 1 para encerrar a leitura.
+
+            //double nota, soma = 0, notaMaior =0, notaMenor=10;
+            //    int cont = 0;
+            //do
+            //{
+
+            //    Console.WriteLine("Entre com a nota: ");
+            //    nota = double.Parse(Console.ReadLine());
+            //    if (nota >= 0 && nota <= 10)
+            //    {
+            //        cont++;
+            //        soma = soma + nota;
+
+            //        if (notaMaior < nota)
+            //        {
+            //            notaMaior = nota;
+            //        }
+
+            //        if (notaMenor > nota)
+            //        {
+            //            notaMenor = nota;
+            //        }
+            //    }
+
+            //    if (nota == -1)
+            //    {
+            //        break;
+            //    }
+
+            //}while (true);
+
+            //Console.WriteLine("Maior nota: " + notaMaior);
+            //Console.WriteLine("Menor Nota: " + notaMenor);
+            //Console.WriteLine("média aritimetica: " + (soma/cont));
+            //Console.WriteLine("Quantidade de alunos: " + cont);
+
+            //12.Apresentar o total da soma dos cem primeiros números inteiros.
+
+            //int soma = 0;
+
+            //for (int i = 1; i <= 100; i++)
+            //{
+            //    soma = soma + i;
+            //}
+            //Console.WriteLine("Soma dos cem primeiros numeros: " + soma);
+
+            //13.Elaborar um programa que apresente o somatório dos valores pares existentes
+            //entre 1 e 500.
+
+            //int soma = 0;
+
+            //for (int i = 1; i <= 500; i++)
+            //{
+            //   if(i %2 == 0) 
+            //    {
+            //    soma = soma + i;
+            //    }                  
+            //}
+            //Console.WriteLine("somatório dos valores pares existentes entre 1 e 500: " + soma);
+
+            //14.Mostrar as potências de 2 variando de 0 a 10.
+
+            //double potenciaDois;
+
+            //for (int i = 0; i <= 10; i++)
+            //{
+            //    potenciaDois = Math.Pow(2, i);
+
+            //    Console.WriteLine("Potencia de dois elevado a " + i + ": "+ potenciaDois);
+            //}
+
+            //15.Ler 4 valores referentes a notas escolares de um aluno e imprimir uma mensagem dizendo se ele está aprovado
+            //ou reprovado, após ter calculado sua média ponderando, considerando pesos 2, 1, 2, e 4, respectivamente.
+            //Considerar nota 7,0 como mínima para aprovação.
+
+            //double n1, n2, n3, n4, media;
+
+
+
+            //Console.WriteLine("Entre com a nota da P1: ");
+            //n1 = double.Parse(Console.ReadLine());
+
+            //if (n1 >= 0 && n1 <= 10)
+            //{
+            //    n1 = n1 * 2;
+            //}
+
+
+            //Console.WriteLine("Entre com a nota da P2: ");
+            //n2 = double.Parse(Console.ReadLine());
+
+            //if (n2 >= 0 && n2 <= 10)
+            //{
+            //    n2 = n2 * 1;
+            //}
+
+            //Console.WriteLine("Entre com a nota da P3: ");
+            //n3 = double.Parse(Console.ReadLine());
+
+            //if (n3 >= 0 && n3 <= 10)
+            //{
+            //    n3 = n3 * 2;
+            //}
+
+            //Console.WriteLine("Entre com a nota da P4: ");
+            //n4 = double.Parse(Console.ReadLine());
+
+            //if (n4 >= 0 && n4 <= 10)
+            //{
+            //    n4 = n4 * 4;
+            //}
+
+            //media = (n1 + n2 + n3 + n4) / 9;
+
+            //if (media < 7)
+            //{
+            //    Console.WriteLine("REPROVADO !!!  " + media);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("APROVADO !!!  " + media);
+            //}
+
+            //16.Ler um número N qualquer menor ou igual a 50 e apresentar o valor obtido da
+            //multiplicação sucessiva de N por 3 enquanto o produto for menor que 250
+            //(N * 3; N * 3 * 3; N * 3 * 3 * 3; etc).
+
+            //int num;
+
+            //Console.WriteLine("Entre com um valor menor ou igual a 50: ");
+            //num = int.Parse(Console.ReadLine());
+
+            //while (num <= 50)
+            //{
+            //    Console.WriteLine("Número N: " + num);
+            //    for (int i = 0; i < num; i++)
+            //    {
+            //        num = num * 3;
+
+            //        if (num > 250)
+            //        {
+            //            break;
+            //        }
+            //        Console.WriteLine(num);
+            //    }
+            //}
+
+            //17.Apresentar os quadrados dos números inteiros de 15 a 200.
+
+            //int num;
+
+            //for (int i = 15; i < 200; i++)
+            //{
+            //    num = i * i;
+            //    Console.WriteLine("O quadrado de "+ i+ " é: " + num);
+            //}
+
+            //18.Elaborar um programa que apresente o valor de uma potência de uma base qualquer
+            //elevada a um expoente qualquer, ou seja, NM.
+
+            //int num1, num2, resultado;
+
+            //Console.WriteLine("Entre com o valor da base: ");
+            //num1 = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Entre com o valor do expoente: ");
+            //num2 = int.Parse(Console.ReadLine());
+
+            //resultado = (int)Math.Pow(num1, num2);
+
+            //Console.WriteLine("A potencia de "+ num1 + " elevado a "+ num2 + " é igual a: " + resultado);
+
+            //19.A prefeitura de uma cidade fez uma pesquisa entre seus habitantes,
+            //coletando dados sobre o salário e número de filhos. A prefeitura deseja saber: 
+
+            //            a) média do salário da população;
+            //            b) média do número de filhos;
+            //            c) maior salário;
+            //            d) percentual de pessoas com salário até R$ 100,00.
+            //O final da leitura de dados se dará com a entrada de um salário negativo.
+
+            //double salario = 0, soma_salario = 0, maior_salario = 0, soma_filhos = 0, porc_pessoas = 0;
+            //int filhos = 0, pessoas = 0;
+
+            //do
+            //{
+
+            //    Console.Write("Entre com o valor do Salário: R$");
+            //    salario = double.Parse(Console.ReadLine());
+            //    Console.WriteLine("----------------------------------------------------------");
+
+            //    if (salario < 0)
+            //    {
+            //        break;
+            //    }
+
+            //    pessoas = pessoas + 1;
+
+            //    Console.WriteLine("Entre com a quantidade de filhos: ");
+            //    filhos = int.Parse(Console.ReadLine());
+            //    Console.WriteLine("----------------------------------------------------------");
+
+            //    if (maior_salario < salario)
+            //    {
+            //        maior_salario = salario;
+            //    }
+
+            //    soma_salario = soma_salario + salario;
+
+            //    soma_filhos = soma_filhos + filhos;
+
+            //    if (salario <= 100)
+            //    {
+            //        porc_pessoas = porc_pessoas+ 1;
+            //    }
+
+
+            //}while (true);
+
+            //    Console.WriteLine("Média do salário da população: R$" + soma_salario/pessoas);
+            //    Console.WriteLine("----------------------------------------------------------");
+            //    Console.WriteLine("Média do número de filhos: "  + soma_filhos/pessoas);
+            //    Console.WriteLine("----------------------------------------------------------");
+            //    Console.WriteLine("Maior salário: R$" + maior_salario);
+            //    Console.WriteLine("----------------------------------------------------------");
+            //    Console.WriteLine("percentual de pessoas com salário até R$ 100,00: " + ((porc_pessoas*100)/ pessoas) + "%");
+            //    Console.WriteLine("----------------------------------------------------------");
+
+            //20.Foi realizada uma pesquisa de algumas características físicas da população de uma
+            //certa região, a qual coletou os seguintes dados referentes a cada habitante para
+            //serem analisados:
+            //            -sexo(masculino e feminino)
+            //            - cor dos olhos(azuis, verdes ou castanhos)
+            //-cor dos cabelos(louros, castanhos, pretos)
+            //-idade
+
+
+            //Faça um algoritmo que determine e escreva:
+
+            //            -a maior idade dos habitantes
+            //            -a quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 anos inclusive
+            //             e que tenham olhos verdes e cabelos louros.
+            //             O final do conjunto de habitantes é reconhecido pelo valor -1 entrada como idade.
+
+            //int sexo = 0, masculino = 0, feminino = 0;
+            //int olhos, o_azul = 0, o_verde = 0, o_castanho = 0;
+            //int cabelo, c_loiro = 0, c_castanho = 0, c_preto = 0;
+            //int idade, pessoas = 0, maior_idade = 0;
+            //int especifico= 0; //a quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 anos inclusive e que tenham olhos verdes e cabelos louros.
             
-            int[] vetor = new int[pessoas];
 
-            for (int i = 0; i < pessoas; i++)
-            {
-                Console.WriteLine("Entre com o nome: ");
-                nome = Console.ReadLine();
+            //do
+            //{
+            //    Console.WriteLine("Entre com a sua idade: ");
+            //    idade = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Entre com seu sexo: ");
-                sexo = Console.ReadLine();
+            //    if (idade == -1)
+            //    {
+            //        break;
+            //    }
+            //    pessoas = pessoas + 1;
 
-                Console.WriteLine("Entre com sua idade: ");
-                idade = int.Parse(Console.ReadLine());
-
-                if (sexo == "masculino" || sexo == "feminino")
-                {
-                    if (sexo == "masculino")
-                    {
-                        m = m + 1;
-                    }
-                    else if (sexo == "feminino")
-                    {
-                        f = f + 1;
-                    }
-                }
                 
-                if (idade < 30)
-                {
-                    id_menorTrinta ++;
-                }
-                else if ( idade > 60)
-                {
-                    id_maiorSessenta++;
-                }
 
-                if ()
+            //    do // Validação de Sexo
+            //    {
+            //        Console.WriteLine("Entre com seu sexo: Digite 1:masculino | Digite 2:feminino");
+            //        sexo = int.Parse(Console.ReadLine()); 
+
+            //        if(sexo == 1)
+            //        {
+            //            masculino = masculino + 1;
+            //            break;
+            //        }
+            //        else if (sexo == 2)
+            //        {
+            //            feminino = feminino + 1;
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Entre com valor válido !!!");
+            //        }
 
 
+            //    } while (true);
 
-            }
+            //    do // Validação de cor dos olhos
+            //    {
+            //        Console.WriteLine("Qual a cor dos seus olhos? Digite 1:Azul | Digite 2:Verde | Digite 3:Castanho ");
+            //        olhos = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Número de pessoas do sexo masculino: " + m );
-            Console.WriteLine("Número de pessoas do sexo feminino: " + f );
-            Console.WriteLine("Número de pessoas com idade inferior a 30 anos: " + id_menorTrinta );
-            Console.WriteLine("Número de pessoas com idade superior a 60 anos: " + id_maiorSessenta );
+            //        if (olhos == 1)
+            //        {
+            //            o_azul = o_azul + 1;
+            //            break;
+            //        }
+            //        else if (olhos == 2)
+            //        {
+            //            o_verde = o_verde + 1;
+            //            break;
+            //        }
+            //        else if (olhos == 3)
+            //        {
+            //            o_castanho = o_castanho + 1;
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Entre com valor válido !!!");
+            //        }
+            //    } while (true);
 
 
+            //    do // Validação cor do cabelo
+            //    {
+            //        Console.WriteLine("Entre com a cor do seu cabelo: Digite 1:Loiro | Digite 2:Castanho | Digite 3:Preto");
+            //        cabelo = int.Parse(Console.ReadLine());
 
+            //        if (cabelo == 1)
+            //        {
+            //            c_loiro = c_loiro + 1;
+            //            break ;
+            //        }
+            //        else if (cabelo == 2)
+            //        {
+            //            c_castanho = c_castanho + 1;
+            //            break;
+            //        }
+            //        else if(cabelo == 3)
+            //        {
+            //            c_preto = c_preto + 1;
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Entre com valor válido !!!");
+            //        }
+
+            //    } while (true);
+
+
+            //    if ((idade > 18) && (idade < 35) && (olhos == 2) && (cabelo == 1))
+            //    {
+            //        especifico = especifico + 1;
+            //    }
+
+            //    if (idade > maior_idade)
+            //    {
+            //        maior_idade = idade;
+            //    }
+
+            //} while (true);
+
+
+            //    Console.WriteLine("A maior idade dos habitantes: " + maior_idade);
+            //    Console.WriteLine("---------------------------------------------");
+            //    Console.WriteLine("a quantidade de indivíduos do sexo feminino cuja idade está entre 18 e 35 anos inclusive e que tenham olhos verdes e cabelos loiros: " + especifico);
+            //    Console.WriteLine("---------------------------------------------");
+            //    Console.WriteLine("Numero de total de pessoas: " + pessoas);
+            //    Console.WriteLine("---------------------------------------------");
+               
 
 
 
